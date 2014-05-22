@@ -1,7 +1,7 @@
-== README
+==Welcome to Fritter!
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is an application for free-writing. When you make a new frit, you're given a randomly generated prompt and a word/sentence/character limit.
+////
 
 Things you may want to cover:
 
