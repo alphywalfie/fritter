@@ -1,0 +1,8 @@
+<div class = "frits_list">
+	<% (@latest_frits).each do |frit| %>
+	<div class = "frit">
+		<%= frit.content %>
+		<span class="user"><%= link_to(@frit.user, friters_path) %></span>
+	</div>
+	<% end %> 
+</div>

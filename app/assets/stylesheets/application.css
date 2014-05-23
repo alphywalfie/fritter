@@ -13,3 +13,39 @@
  *= require_tree .
  *= require_self
  */
+body {
+	background-image: ;
+	background-repeat: repeat;
+} 
+
+
+
+#navbar {
+
+}
+
+#navbar li {
+ 	list-style: none;
+}
+
+.container {
+
+}
+
+.frit {
+	width: 500px;
+	padding: 5px;
+	font-family: sans-serif;
+	font-size: 14px;
+	vertical-align: middle;
+}
+
+.user {
+	font-family: sans-serif;
+	font-size: 8px;
+	letter-spacing: 2px;
+	color: ;
+	font-style: ;
+	right: 2px;
+	bottom: 2px;
+}
