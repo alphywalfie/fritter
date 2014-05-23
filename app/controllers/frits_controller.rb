@@ -6,9 +6,7 @@ class FritsController < ApplicationController
 	def new
 		@prompt = Prompt.Sample(1)
 		@limit = Limit.Sample(1)
-		frit = Frit.new
-#		current_prompt = @prompt
-#		current_limit = @limit
+		@frit = Frit.new
 	end
 
 	def create
@@ -16,8 +14,25 @@ class FritsController < ApplicationController
 		@frit.content = params[:frit][:content]
 		@frit.posted_on = DateTime.now
 		@frit.user = current_user
-		@frit.prompt = current_prompt
-		@frit.limit = current_limit
+		@frit.prompt = params[:frit][:prompt]
+		@frit.limit = params[:frit][:limit]
 		@frit.save!
+	end
+
+	def edit
+		@frit = Frit.find(params[:id])
+	end
+
+	def update
+		@frit =Frit.find(params[:id])
+		@frit.content = params[:frit][:content]
+		@frit.save!
+	end
+
+	def delete
+		@frit = Frit.find(params[:id])
+		@frit.destroy!
+		redirect_to index_path
+		#FIGURE OUT HOW THE FUCK TO DELETE STUFF
 	end
 end
