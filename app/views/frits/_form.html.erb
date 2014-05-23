@@ -1,6 +1,8 @@
 <%= form_for(@frit) do |f| %>
 <div class = ""><%= f.text_field :prompt, value: @prompt[0].topic %></div>
 <div class = ""><%= f.text_field :limit, value: @limit[0].limit %></div>
+<!--<div class = ""><%= f.text_field :prompt, value: @prompt %></div>
+<div class = ""><%= f.text_field :limit, value: @limit %></div>-->
 <%= f.text_area :content %>
 <%= f.submit %>
 <% end %>
