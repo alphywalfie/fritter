@@ -1,14 +1,15 @@
 class Ability
   include CanCan::Ability
 
-  def initialize(user)
+    def initialize(user)
 
-user ||= User.new
-if user.email = "admin@example.com"
-    can :access, :rails_admin
-    can :dashboard
-    can :manage, :all       
-end
+    user ||= User.new
+        if user.email == "admin@example.com"
+            can :access, :rails_admin
+            can :dashboard
+            can :manage, :all        
+        end
+    end
     # Define abilities for the passed in user here. For example:
     #
     #   user ||= User.new # guest user (not logged in)
@@ -35,5 +36,4 @@ end
     #
     # See the wiki for details:
     # https://github.com/ryanb/cancan/wiki/Defining-Abilities
-  end
 end
