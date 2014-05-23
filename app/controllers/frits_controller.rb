@@ -4,8 +4,10 @@ class FritsController < ApplicationController
 	end
 
 	def new
-		@prompt = Prompt.Sample(1)
-		@limit = Limit.Sample(1)
+		prompts = Prompt.all
+		limits = Limit.all
+		@prompt = prompts.sample(1)
+		@limit = limits.sample(1)
 		@frit = Frit.new
 	end
 
