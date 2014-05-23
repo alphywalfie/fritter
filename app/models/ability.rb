@@ -4,7 +4,7 @@ class Ability
     def initialize(user)
 
     user ||= User.new
-        if user.email == "admin@example.com"
+        if user.email == "sadtrashhobo@yahoo.com"
             can :access, :rails_admin
             can :dashboard
             can :manage, :all        
